@@ -59,9 +59,11 @@
         public decimal DeliveryFee
         {
             get { return deliveryFee; }
+            
             private set
+
             {
-                if (deliveryFee > 0)
+                if (deliveryFee >= 0)
                 {
                     deliveryFee = value;
                 }

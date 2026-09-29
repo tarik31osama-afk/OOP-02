@@ -33,7 +33,7 @@
             {
                 for (int i = 0; i < shipments.Length; i++)
                 {
-                    if (shipments[i].TrackingCode == trackingcode)
+                    if (shipments[i] != null && shipments[i].TrackingCode == trackingcode)
                         return shipments[i];
                 }
 
@@ -45,7 +45,7 @@
         {
             for (int i = 0; i < shipments.Length; i++)
             {
-                if (shipments[i].TrackingCode == null)
+                if (shipments[i] == null)
                 {
                     shipments[i] = shipment;
                     return true;
@@ -60,7 +60,7 @@
             {
                 if (shipments[i] != null && shipments[i].TrackingCode == trackingCode)
                 {
-                    for(int j=i;i< shipments.Length-1;j++)
+                    for(int j=i;j< shipments.Length-1;j++)
                     {
 
                         shipments[j] = shipments[j + 1];

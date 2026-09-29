@@ -171,7 +171,7 @@ namespace CSharp_OOP02
 
             Shipment search = deliveryCenter[searchCode];
 
-            if(!string.IsNullOrWhiteSpace(searchCode))
+            if (search != null)
             {
                 search.PrintShipment();
             }
